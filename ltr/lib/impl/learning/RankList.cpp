@@ -24,7 +24,7 @@
 
 
 #include "../../api/learning/RankList.hpp"
-#include "../../api/LtrError.hpp"
+#include "../../api/utils/LtrError.hpp"
 
 using std::move;
 using std::string;

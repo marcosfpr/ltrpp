@@ -1,4 +1,4 @@
-#include <ltr.hpp>
+#include <ltrpp/ltr.hpp>
 
 #include <cstdlib>
 #include <gtest/gtest.h>

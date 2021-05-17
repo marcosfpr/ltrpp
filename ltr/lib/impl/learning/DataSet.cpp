@@ -21,7 +21,7 @@
 #include "../../api/learning/DataPoint.hpp"
 #include "../../api/learning/RankList.hpp"
 #include "../../api/learning/DataSet.hpp"
-#include "../../api/LtrError.hpp"
+#include "../../api/utils/LtrError.hpp"
 
 #include <filesystem> // filesystem
 #include <fstream> // ifstream

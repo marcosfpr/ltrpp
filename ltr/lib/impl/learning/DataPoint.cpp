@@ -26,9 +26,9 @@
 
 #include "../../api/learning/DataPoint.hpp"
 
-#include "../../api/LtrError.hpp"
+#include "../../api/utils/LtrError.hpp"
+#include "../../api/utils/StringManip.hpp"
 
-#include <boost/algorithm/string.hpp>
 
 #define NaN -1000.00
 
@@ -166,7 +166,7 @@ protected:
     static void getKeyValueFeaturePair(std::pair<string, string> &keyValue, string feature)
     {
         vector<string> tokens;
-        boost::split(tokens, feature, boost::is_any_of(":"));
+        ltr::split(feature, tokens, ':');
         keyValue = std::make_pair(tokens[0], tokens[1]);
     }
 
@@ -181,12 +181,12 @@ protected:
             {
                 this->description = raw.substr(idx+1);
                 raw = raw.substr(0, idx); // raw text without comments
-                boost::trim(raw);
-                boost::trim(this->description);
+                ltr::trim(raw);
+                ltr::trim(this->description);
             }
 
             vector<string> tokens;
-            boost::split(tokens, raw, boost::is_any_of(" "));
+            ltr::split(raw, tokens, ' ');
 
             this->label = std::stof(tokens[0]);
 

@@ -19,13 +19,12 @@
 //  THE SOFTWARE.
 
 #include "../../api/utils/Logging.hpp"
-#include "../../api/LtrError.hpp"
+#include "../../api/utils/LtrError.hpp"
 
 #include <iomanip>
 #include <sstream>
 #include <utility>
-
-#include <boost/algorithm/string.hpp>
+#include <algorithm>
 #include <spdlog/spdlog.h>
 
 void ltr::init_logging()
@@ -122,6 +121,6 @@ const char * ltr::color_delta(double value) {
 }
 
 const char * ltr::color_status(const string& status) {
-    if (boost::iequals(status, "OK")) return GREEN;
+    if (std::strcmp(status.c_str(), "OK") == 0) return GREEN;
     return RED;
 }

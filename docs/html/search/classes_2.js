@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['key_5fvalue_73',['key_value',['../structltr_1_1key__value.html',1,'ltr']]]
+  ['learner_72',['Learner',['../classltr_1_1_learner.html',1,'ltr']]],
+  ['ltrerror_73',['LtrError',['../classltr_1_1_ltr_error.html',1,'ltr']]]
 ];

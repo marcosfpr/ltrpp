@@ -48,11 +48,13 @@ option(BUILD_TESTS "Build tests" ${MASTER_PROJECT})
 option(BUILD_DOCS "Build documentation" ${MASTER_PROJECT})
 option(BUILD_INSTALLER "Build installer target" ${MASTER_PROJECT})
 option(BUILD_PACKAGE "Build package" ${MASTER_PROJECT})
+option(BUILD_PYTHON_BINDING "Compile the Python binding" ${MASTER_PROJECT})
 
 # How to build
-option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
+option(BUILD_SHARED_LIBS "Build shared libraries" ON)
 option(BUILD_WITH_PEDANTIC_WARNINGS "Use pedantic warnings. This is useful for developers because many of these warnings will be in continuous integration anyway." ${DEBUG_MODE})
 option(BUILD_WITH_UTF8 "Accept utf-8 in MSVC by default." ON)
+
 
 #######################################################
 ### Additional flags                                ###
@@ -62,7 +64,7 @@ find_program(LCOV lcov)
 find_program(GENHTML genhtml)
 
 if(GCOV AND LCOV AND GENHTML)
-        set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -fprofile-arcs -ftest-coverage -O0")
+        set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -fprofile-arcs -ftest-coverage -O0 -fPIC")
 endif()
 
 
@@ -70,6 +72,11 @@ endif()
 ### Libraries                                       ###
 #######################################################
 add_subdirectory(ltr)
+
+# Python bindings
+if (BUILD_PYTHON_BINDING)
+    add_subdirectory(python)
+endif()
 
 
 #######################################################

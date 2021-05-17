@@ -18,7 +18,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#include "../../api/LtrError.hpp"
+#include "../../api/utils/LtrError.hpp"
 #include "../../api/learning/Ranker.hpp"
 #include "../../api/metric/MetricScorer.hpp"
 

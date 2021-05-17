@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/LtrError.hpp" line="35" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/LtrError.hpp" bodystart="35" bodyend="35"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/LtrError.hpp" line="35" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/LtrError.hpp" bodystart="35" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ltr_error_1a9f3c50f85da9d516fee9165801daa48b" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/LtrError.hpp" line="36" column="22" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/LtrError.hpp" bodystart="36" bodyend="36"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/LtrError.hpp" line="36" column="22" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/LtrError.hpp" bodystart="36" bodyend="36"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -63,7 +63,7 @@
         <label>std::runtime_error</label>
       </node>
     </collaborationgraph>
-    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/LtrError.hpp" line="33" column="45" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/LtrError.hpp" bodystart="33" bodyend="37"/>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/LtrError.hpp" line="33" column="45" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/LtrError.hpp" bodystart="33" bodyend="37"/>
     <listofallmembers>
       <member refid="classltr_1_1_ltr_error_1a3482b4f5d9a77f76948d3699092eb4ba" prot="public" virt="non-virtual"><scope>ltr::LtrError</scope><name>LtrError</name></member>
       <member refid="classltr_1_1_ltr_error_1a9f3c50f85da9d516fee9165801daa48b" prot="public" virt="non-virtual"><scope>ltr::LtrError</scope><name>LtrError</name></member>

@@ -86,10 +86,6 @@
     <member refid="classltr_1_1_data_point_impl_1afe36649c378984728015a13da5456b87" kind="function"><name>getKeyValueFeaturePair</name></member>
     <member refid="classltr_1_1_data_point_impl_1a88fa8f4d62d7d1a3652385db7aa1f2a6" kind="function"><name>parse</name></member>
   </compound>
-  <compound refid="structltr_1_1key__value" kind="struct"><name>ltr::key_value</name>
-    <member refid="structltr_1_1key__value_1a473ab9eb62dbbfcc550bb16a9f624815" kind="variable"><name>key</name></member>
-    <member refid="structltr_1_1key__value_1aaf038cf17972b7e88579cf959360657c" kind="variable"><name>value</name></member>
-  </compound>
   <compound refid="classltr_1_1_learner" kind="class"><name>ltr::Learner</name>
     <member refid="classltr_1_1_learner_1acf85ea361fa758668779249d77ce2ee5" kind="function"><name>predict</name></member>
     <member refid="classltr_1_1_learner_1a8606e514b58a7e0caf51cfff1e247e44" kind="function"><name>rank</name></member>
@@ -214,9 +210,7 @@
     <member refid="_iterators_8hpp_1a093773d4a757c2d26b4db423544f129f" kind="typedef"><name>FeaturesContainer</name></member>
     <member refid="_iterators_8hpp_1a2bf554721a2837e450a54db357b900fe" kind="typedef"><name>ReadableDataPoint</name></member>
     <member refid="_iterators_8hpp_1a2027db64d94276e4824691bced873c6b" kind="typedef"><name>Sample</name></member>
-    <member refid="_key_value_8hpp_1a0dcd7f5fa3513580fc8216eef1a0eec3" kind="typedef"><name>KeyValue</name></member>
     <member refid="_data_set_8hpp_1a191fcde2ec8b1eb7b9680800747f1aa8" kind="function"><name>load_svmlight</name></member>
-    <member refid="_key_value_8hpp_1ad356abd0228c3def76ff192ade5d3ccf" kind="function"><name>parseKeyValue</name></member>
     <member refid="_logging_8hpp_1a5049a4c91c1d15e10b12f52b76b6745c" kind="function"><name>init_logging</name></member>
     <member refid="_logging_8hpp_1a1660183056e30b25a527d08ee8a8210c" kind="function"><name>color_score</name></member>
     <member refid="_logging_8hpp_1affa6925341f1c67fc0ac2e8f492cd94a" kind="function"><name>color_delta</name></member>
@@ -225,6 +219,10 @@
     <member refid="_logging_8hpp_1a02680bdc96ec899628b33ce6b2e70893" kind="function"><name>log</name></member>
     <member refid="_logging_8hpp_1aa7bb902b4e9dc50f01c53aca094c26d3" kind="function"><name>log</name></member>
     <member refid="_logging_8hpp_1a402821d151f76a4b1794bb88e7ff6686" kind="function"><name>log</name></member>
+    <member refid="_string_manip_8hpp_1a3ab123d28a8d31251b4b6f01d5f08e77" kind="function"><name>split</name></member>
+    <member refid="_string_manip_8hpp_1afaf0eb77a287418ea113a2af803c7c37" kind="function"><name>trim</name></member>
+    <member refid="_string_manip_8hpp_1a32c1f8c82fb8444ef60f2ed976b255ff" kind="function"><name>rtrim</name></member>
+    <member refid="_string_manip_8hpp_1a3bbba9a9fa51a9d1905e01616d5c8eb4" kind="function"><name>ltrim</name></member>
   </compound>
   <compound refid="_data_point_8hpp" kind="file"><name>DataPoint.hpp</name>
   </compound>
@@ -240,17 +238,19 @@
   </compound>
   <compound refid="_rank_list_8hpp" kind="file"><name>RankList.hpp</name>
   </compound>
+  <compound refid="learning_8hpp" kind="file"><name>learning.hpp</name>
+  </compound>
   <compound refid="ltr_8hpp" kind="file"><name>ltr.hpp</name>
   </compound>
-  <compound refid="_ltr_error_8hpp" kind="file"><name>LtrError.hpp</name>
+  <compound refid="metric_8hpp" kind="file"><name>metric.hpp</name>
+  </compound>
+  <compound refid="utils_8hpp" kind="file"><name>utils.hpp</name>
   </compound>
   <compound refid="_m_a_p_scorer_8hpp" kind="file"><name>MAPScorer.hpp</name>
   </compound>
   <compound refid="_metric_scorer_8hpp" kind="file"><name>MetricScorer.hpp</name>
   </compound>
   <compound refid="_precision_scorer_8hpp" kind="file"><name>PrecisionScorer.hpp</name>
-  </compound>
-  <compound refid="_key_value_8hpp" kind="file"><name>KeyValue.hpp</name>
   </compound>
   <compound refid="_logging_8hpp" kind="file"><name>Logging.hpp</name>
     <member refid="_logging_8hpp_1ab702106cf3b3e96750b6845ded4e0299" kind="define"><name>RESET</name></member>
@@ -271,9 +271,13 @@
     <member refid="_logging_8hpp_1ae87af5e6363eb1913b17f24dcb60a22d" kind="define"><name>BOLDCYAN</name></member>
     <member refid="_logging_8hpp_1aa4ef051614aa0bd503b0a18ee158c5d7" kind="define"><name>BOLDWHITE</name></member>
   </compound>
+  <compound refid="_ltr_error_8hpp" kind="file"><name>LtrError.hpp</name>
+  </compound>
+  <compound refid="_string_manip_8hpp" kind="file"><name>StringManip.hpp</name>
+  </compound>
   <compound refid="_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
-    <member refid="_c_make_lists_8txt_1a3ba5f1ebbf3cd0190d6f21ef9b32174f" kind="function"><name>CPMFindPackage</name></member>
-    <member refid="_c_make_lists_8txt_1aa88c7e2aab701a04ff1e96ca7d5337e8" kind="function"><name>target_include_directories</name></member>
+    <member refid="_c_make_lists_8txt_1ad22406135535e7adcf4b73ea9351dacc" kind="function"><name>CPMFindPackage</name></member>
+    <member refid="_c_make_lists_8txt_1a10802b184dc7017ecc2bcba495077ec7" kind="function"><name>target_include_directories</name></member>
   </compound>
   <compound refid="_data_point_8cpp" kind="file"><name>DataPoint.cpp</name>
     <member refid="_data_point_8cpp_1a953f667fb27fb68dd74a487d002b19b5" kind="define"><name>NaN</name></member>
@@ -296,9 +300,9 @@
   </compound>
   <compound refid="_precision_scorer_8cpp" kind="file"><name>PrecisionScorer.cpp</name>
   </compound>
-  <compound refid="_key_value_8cpp" kind="file"><name>KeyValue.cpp</name>
-  </compound>
   <compound refid="_logging_8cpp" kind="file"><name>Logging.cpp</name>
+  </compound>
+  <compound refid="_string_manip_8cpp" kind="file"><name>StringManip.cpp</name>
   </compound>
   <compound refid="dir_7fa9c85e78b9cd1ecb217fa3b67fe5cc" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/api</name>
   </compound>
@@ -308,20 +312,22 @@
   </compound>
   <compound refid="dir_19e429dc30c463c633407e1ef50132f9" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/impl</name>
   </compound>
-  <compound refid="dir_5d08dd7e4f2ba303fe2df3a58d8dcdef" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning</name>
-  </compound>
   <compound refid="dir_2adde966242bb5644a992a6c3dc2b6bd" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/api/learning</name>
+  </compound>
+  <compound refid="dir_5d08dd7e4f2ba303fe2df3a58d8dcdef" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning</name>
   </compound>
   <compound refid="dir_75e9323bb0f9fc7c99b0c774e0f06622" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib</name>
   </compound>
   <compound refid="dir_4af5f4954906a24be8474025cf6a4c92" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr</name>
   </compound>
-  <compound refid="dir_126863dc25ffa171e6a4f8d36af4182e" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric</name>
+  <compound refid="dir_3740e4044621d1d0e0278325d3198360" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp</name>
   </compound>
   <compound refid="dir_cf8dd54dfd2fc1358b9ffd537e87755d" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/api/metric</name>
   </compound>
-  <compound refid="dir_2b76b2137270961f99c3605e6a9a8f26" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils</name>
+  <compound refid="dir_126863dc25ffa171e6a4f8d36af4182e" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric</name>
   </compound>
   <compound refid="dir_387df1618943ef4f834c1ddbcb730069" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/api/utils</name>
+  </compound>
+  <compound refid="dir_2b76b2137270961f99c3605e6a9a8f26" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils</name>
   </compound>
 </doxygenindex>

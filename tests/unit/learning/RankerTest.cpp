@@ -1,7 +1,7 @@
 #include <memory>
 #include <vector>
 
-#include <ltr.hpp>
+#include <ltrpp/ltr.hpp>
 #include <gtest/gtest.h>
 
 using std::cout;

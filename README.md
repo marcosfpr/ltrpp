@@ -103,7 +103,7 @@ Using CMake and certifying that all prerequisites are ok, let's understand how t
 Copy the files from the `source` directory of this project to your `include` directory.
 
   ```c++
-  #include <ltr.hpp>
+  #include <ltrpp/ltr.hpp>
   ```
 
 [**Warning**] Make sure you have C++17 (>) installed
@@ -184,7 +184,7 @@ The main goal in this case is to import the `OHSUMED` training file, fit a LTR m
 * Consecutive Selections: 3
 
 ```c++
-#include <ltr.hpp>
+#include <ltrpp/ltr.hpp>
 
 // .. other imports
 

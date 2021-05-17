@@ -20,7 +20,7 @@
 
 #include "../../../api/learning/ensemble/AdaRank.hpp"
 #include "../../../api/metric/MetricScorer.hpp"
-#include "../../../api/LtrError.hpp"
+#include "../../../api/utils/LtrError.hpp"
 
 #include <string>
 #include <utility>

@@ -34,7 +34,7 @@ After installing the ltr library, you can import the library as a header-only fi
 .. code-block:: c
   :linenos:
 
-  #include <ltr.hpp>
+  #include <ltrpp/ltr.hpp>
 
 .. warning::
    Make sure you have C++17 or higher installed.

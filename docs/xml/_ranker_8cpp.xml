@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="_ranker_8cpp" kind="file" language="C++">
     <compoundname>Ranker.cpp</compoundname>
-    <includes refid="_ltr_error_8hpp" local="yes">../../api/LtrError.hpp</includes>
+    <includes refid="_ltr_error_8hpp" local="yes">../../api/utils/LtrError.hpp</includes>
     <includes refid="_ranker_8hpp" local="yes">../../api/learning/Ranker.hpp</includes>
     <includes refid="_metric_scorer_8hpp" local="yes">../../api/metric/MetricScorer.hpp</includes>
     <includes local="no">numeric</includes>
@@ -22,16 +22,16 @@
         <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="20">
-        <label>filesystem</label>
-      </node>
       <node id="2">
-        <label>../../api/LtrError.hpp</label>
+        <label>../../api/utils/LtrError.hpp</label>
         <link refid="_ltr_error_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+      </node>
+      <node id="20">
+        <label>filesystem</label>
       </node>
       <node id="1">
         <label>/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp</label>
@@ -179,7 +179,7 @@
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THE<sp/>SOFTWARE.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/LtrError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/utils/LtrError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/learning/Ranker.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/metric/MetricScorer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>

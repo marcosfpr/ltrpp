@@ -3,7 +3,7 @@
 #######################################################
 
 CPMFindPackage(
-    NAME boost-cmake
+    NAME Boost
     GITHUB_REPOSITORY marcosfpr/boost-cmake
     VERSION 1.71.0
     FIND_PACKAGE_ARGUMENTS ""
@@ -34,8 +34,8 @@ set(
     impl/metric/MetricScorer.cpp
     impl/metric/MAPScorer.cpp
     impl/metric/PrecisionScorer.cpp
-    impl/utils/KeyValue.cpp
     impl/utils/Logging.cpp
+    impl/utils/StringManip.cpp
 
 )
 
@@ -49,11 +49,11 @@ target_include_directories(
     PUBLIC api
 )
 
-# 
-target_link_libraries(ltr PRIVATE Boost::boost spdlog ${FILE_SYSTEM_LIB} Threads::Threads)
-
 target_compile_features(ltr PUBLIC cxx_std_17)
 
+target_link_libraries(ltr PRIVATE Boost::boost spdlog ${FILE_SYSTEM_LIB} Threads::Threads)
+
+    
 include(CheckSymbolExists)
 
 # Some hack to MSVC and boost
@@ -62,7 +62,6 @@ if(MSVC)
 endif() 
 
 # Some hack to not depend on FILE* internals
-# https://github.com/alandefreitas/matplotplusplus/issues/4
 check_symbol_exists(__fbufsize "stdio_ext.h" HAVE_FBUFSIZE)
 if (HAVE_FBUFSIZE)
     target_compile_definitions(ltr PRIVATE LTR_HAS_FBUFSIZE)
@@ -92,7 +91,7 @@ if (BUILD_WITH_PEDANTIC_WARNINGS)
 endif ()
 
 # Setting public header
- set_target_properties(ltr PROPERTIES PUBLIC_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/api/ltr.hpp")
+ set_target_properties(ltr PROPERTIES PUBLIC_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/api/ltrpp/ltr.hpp")
 
 # Install
 if (BUILD_INSTALLER)
@@ -105,7 +104,7 @@ if (BUILD_INSTALLER)
             )
 
     # Install headers
-    install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/api/ltrpp
             DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
             FILES_MATCHING PATTERN "*.hpp"
             )

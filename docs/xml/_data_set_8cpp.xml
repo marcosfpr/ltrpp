@@ -5,7 +5,7 @@
     <includes refid="_data_point_8hpp" local="yes">../../api/learning/DataPoint.hpp</includes>
     <includes refid="_rank_list_8hpp" local="yes">../../api/learning/RankList.hpp</includes>
     <includes refid="_data_set_8hpp" local="yes">../../api/learning/DataSet.hpp</includes>
-    <includes refid="_ltr_error_8hpp" local="yes">../../api/LtrError.hpp</includes>
+    <includes refid="_ltr_error_8hpp" local="yes">../../api/utils/LtrError.hpp</includes>
     <includes local="no">filesystem</includes>
     <includes local="no">fstream</includes>
     <includes local="no">memory</includes>
@@ -14,16 +14,16 @@
       <node id="5">
         <label>list</label>
       </node>
-      <node id="12">
-        <label>filesystem</label>
-      </node>
       <node id="10">
-        <label>../../api/LtrError.hpp</label>
+        <label>../../api/utils/LtrError.hpp</label>
         <link refid="_ltr_error_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
+      </node>
+      <node id="12">
+        <label>filesystem</label>
       </node>
       <node id="11">
         <label>stdexcept</label>
@@ -128,7 +128,7 @@
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/learning/DataPoint.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/learning/RankList.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/learning/DataSet.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/LtrError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/utils/LtrError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>filesystem</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>ifstream</highlight><highlight class="normal"></highlight></codeline>

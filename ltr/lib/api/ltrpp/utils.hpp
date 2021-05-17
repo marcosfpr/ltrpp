@@ -18,24 +18,11 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#ifndef LTR_HPP_
-#define LTR_HPP_
+#ifndef LTR_UTILS_HPP_
+#define LTR_UTILS_HPP_
 
-#include "learning/DataPoint.hpp"
-#include "learning/RankList.hpp"
-#include "learning/DataSet.hpp"
-#include "learning/Ranker.hpp"
-#include "learning/Learner.hpp"
-#include "learning/ensemble/AdaRank.hpp"
+#include "../utils/Logging.hpp"
+#include "../utils/LtrError.hpp"
+#include "../utils/StringManip.hpp"
 
-#include "metric/MetricScorer.hpp"
-#include "metric/MAPScorer.hpp"
-#include "metric/PrecisionScorer.hpp"
-
-#include "utils/KeyValue.hpp"
-#include "utils/Logging.hpp"
-
-
-#include "LtrError.hpp"
-
-#endif //LTR_HPP_
+#endif //LTR_UTILS_HPP_

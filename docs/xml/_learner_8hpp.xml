@@ -5,7 +5,8 @@
     <includes refid="_rank_list_8hpp" local="yes">RankList.hpp</includes>
     <includes refid="_data_set_8hpp" local="yes">DataSet.hpp</includes>
     <includedby refid="_ranker_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp</includedby>
-    <includedby refid="ltr_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/ltr.hpp</includedby>
+    <includedby refid="learning_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/learning.hpp</includedby>
+    <includedby refid="ltr_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/ltr.hpp</includedby>
     <includedby refid="_learner_8cpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Learner.cpp</includedby>
     <incdepgraph>
       <node id="6">
@@ -73,9 +74,11 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
-      <node id="4">
-        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltr.hpp</label>
+      <node id="5">
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/ltr.hpp</label>
         <link refid="ltr_8hpp_source"/>
       </node>
       <node id="2">
@@ -85,12 +88,20 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp</label>
         <link refid="_ada_rank_8hpp_source"/>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/learning.hpp</label>
+        <link refid="learning_8hpp_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classltr_1_1_learner" prot="public">ltr::Learner</innerclass>

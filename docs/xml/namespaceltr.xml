@@ -5,7 +5,6 @@
     <innerclass refid="classltr_1_1_ada_rank" prot="public">ltr::AdaRank</innerclass>
     <innerclass refid="classltr_1_1_data_point" prot="public">ltr::DataPoint</innerclass>
     <innerclass refid="classltr_1_1_data_point_impl" prot="public">ltr::DataPointImpl</innerclass>
-    <innerclass refid="structltr_1_1key__value" prot="public">ltr::key_value</innerclass>
     <innerclass refid="classltr_1_1_learner" prot="public">ltr::Learner</innerclass>
     <innerclass refid="classltr_1_1_ltr_error" prot="public">ltr::LtrError</innerclass>
     <innerclass refid="classltr_1_1_m_a_p_scorer" prot="public">ltr::MAPScorer</innerclass>
@@ -120,20 +119,6 @@
         </inbodydescription>
         <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Iterators.hpp" line="52" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Iterators.hpp" bodystart="52" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="_key_value_8hpp_1a0dcd7f5fa3513580fc8216eef1a0eec3" prot="public" static="no">
-        <type>struct <ref refid="structltr_1_1key__value" kindref="compound">ltr::key_value</ref></type>
-        <definition>typedef struct ltr::key_value ltr::KeyValue</definition>
-        <argsstring></argsstring>
-        <name>KeyValue</name>
-        <briefdescription>
-<para>Simple representation of key-value pairs handled by learning algorithms. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/KeyValue.hpp" line="37" column="10"/>
-      </memberdef>
       </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="_data_set_8hpp_1a191fcde2ec8b1eb7b9680800747f1aa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -166,33 +151,6 @@
         </inbodydescription>
         <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataSet.hpp" line="45" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataSet.cpp" bodystart="36" bodyend="72" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataSet.hpp" declline="45" declcolumn="13"/>
       </memberdef>
-      <memberdef kind="function" id="_key_value_8hpp_1ad356abd0228c3def76ff192ade5d3ccf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>list&lt; <ref refid="structltr_1_1key__value" kindref="compound">KeyValue</ref> &gt;</type>
-        <definition>list&lt; KeyValue &gt; ltr::parseKeyValue</definition>
-        <argsstring>(string raw, const string &amp;key_value_separator=&quot;:&quot;, const string &amp;pair_separator=&quot; &quot;)</argsstring>
-        <name>parseKeyValue</name>
-        <param>
-          <type>string</type>
-          <declname>raw</declname>
-        </param>
-        <param>
-          <type>const string &amp;</type>
-          <declname>key_value_separator</declname>
-          <defval>&quot;:&quot;</defval>
-        </param>
-        <param>
-          <type>const string &amp;</type>
-          <declname>pair_separator</declname>
-          <defval>&quot; &quot;</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/KeyValue.hpp" line="39" column="6" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/KeyValue.cpp" bodystart="30" bodyend="56" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/KeyValue.hpp" declline="39" declcolumn="6"/>
-      </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1a5049a4c91c1d15e10b12f52b76b6745c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void ltr::init_logging</definition>
@@ -204,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="49" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="31" bodyend="34" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="49" declcolumn="10"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="49" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="30" bodyend="33" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="49" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1a1660183056e30b25a527d08ee8a8210c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -233,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="65" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="112" bodyend="116" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="65" declcolumn="16"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="65" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="111" bodyend="115" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="65" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1affa6925341f1c67fc0ac2e8f492cd94a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -262,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="72" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="118" bodyend="122" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="72" declcolumn="16"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="72" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="117" bodyend="121" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="72" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1aa5b201561a9f4188c8610cbd23f2aa4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -291,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="79" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="124" bodyend="127" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="79" declcolumn="16"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="79" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="123" bodyend="126" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="79" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1afd0b55b197205e174da96108bd2a51ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -357,7 +315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="88" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="37" bodyend="68" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="88" declcolumn="10"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="88" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="36" bodyend="67" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="88" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1a02680bdc96ec899628b33ce6b2e70893" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -423,7 +381,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="97" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="70" bodyend="73" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="97" declcolumn="10"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="97" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="69" bodyend="72" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="97" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1aa7bb902b4e9dc50f01c53aca094c26d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -460,7 +418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="105" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="103" bodyend="110" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="105" declcolumn="12"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="105" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="102" bodyend="109" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="105" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1a402821d151f76a4b1794bb88e7ff6686" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -518,7 +476,143 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="114" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="75" bodyend="101" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="114" declcolumn="10"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="114" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="74" bodyend="100" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="114" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="_string_manip_8hpp_1a3ab123d28a8d31251b4b6f01d5f08e77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ltr::split</definition>
+        <argsstring>(std::string &amp;str, std::vector&lt; std::string &gt; &amp;out, char delim)</argsstring>
+        <name>split</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt; &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>delim</declname>
+        </param>
+        <briefdescription>
+<para>Splits a string by some delimiter character. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: String to split </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Response vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Delimiter char </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/StringManip.hpp" line="35" column="11" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/StringManip.cpp" bodystart="25" bodyend="34" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/StringManip.hpp" declline="35" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="_string_manip_8hpp_1afaf0eb77a287418ea113a2af803c7c37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ltr::trim</definition>
+        <argsstring>(std::string &amp;s)</argsstring>
+        <name>trim</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Trim one string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: string to be processed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/StringManip.hpp" line="42" column="11" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/StringManip.cpp" bodystart="52" bodyend="55" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/StringManip.hpp" declline="42" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="_string_manip_8hpp_1a32c1f8c82fb8444ef60f2ed976b255ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ltr::rtrim</definition>
+        <argsstring>(std::string &amp;s)</argsstring>
+        <name>rtrim</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Trim one string from start. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: string to be processed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/StringManip.hpp" line="49" column="11" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/StringManip.cpp" bodystart="45" bodyend="49" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/StringManip.hpp" declline="49" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="_string_manip_8hpp_1a3bbba9a9fa51a9d1905e01616d5c8eb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ltr::ltrim</definition>
+        <argsstring>(std::string &amp;s)</argsstring>
+        <name>ltrim</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Trim one string from end. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: string to be processed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/StringManip.hpp" line="56" column="11" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/StringManip.cpp" bodystart="38" bodyend="42" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/StringManip.hpp" declline="56" declcolumn="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

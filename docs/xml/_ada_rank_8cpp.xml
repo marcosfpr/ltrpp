@@ -4,7 +4,7 @@
     <compoundname>AdaRank.cpp</compoundname>
     <includes refid="_ada_rank_8hpp" local="yes">../../../api/learning/ensemble/AdaRank.hpp</includes>
     <includes refid="_metric_scorer_8hpp" local="yes">../../../api/metric/MetricScorer.hpp</includes>
-    <includes refid="_ltr_error_8hpp" local="yes">../../../api/LtrError.hpp</includes>
+    <includes refid="_ltr_error_8hpp" local="yes">../../../api/utils/LtrError.hpp</includes>
     <includes local="no">string</includes>
     <includes local="no">utility</includes>
     <includes local="no">vector</includes>
@@ -29,7 +29,7 @@
         </childnode>
       </node>
       <node id="19">
-        <label>../../../api/LtrError.hpp</label>
+        <label>../../../api/utils/LtrError.hpp</label>
         <link refid="_ltr_error_8hpp_source"/>
         <childnode refid="6" relation="include">
         </childnode>
@@ -213,7 +213,7 @@
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../../api/learning/ensemble/AdaRank.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../../api/metric/MetricScorer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../../api/LtrError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../../api/utils/LtrError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>

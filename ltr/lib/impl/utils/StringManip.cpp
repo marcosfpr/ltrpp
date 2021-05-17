@@ -17,27 +17,39 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
-#ifndef LTR_KEY_VALUE_HPP_
-#define LTR_KEY_VALUE_HPP_
 
-#include <list>
-#include <string>
+#include "../../api/utils/StringManip.hpp"
 
-using std::list;
-using std::string;
+#include <algorithm> 
 
-namespace ltr{
+void ltr::split(std::string &str, std::vector<std::string> &out, char delim){
+    size_t start;
+	size_t end = 0;
 
-/**
- * @brief Simple representation of key-value pairs handled by learning algorithms.
- * 
- */
-typedef struct key_value {
-    string key, value;
-} KeyValue;
+	while ((start = str.find_first_not_of(delim, end)) != std::string::npos)
+	{
+		end = str.find(delim, start);
+		out.push_back(str.substr(start, end - start));
+	}
+}
 
-list<KeyValue> parseKeyValue(string raw, const string& key_value_separator=":", const string& pair_separator=" ");
 
-};
+// trim from start (in place)
+void ltr::ltrim(std::string &s) {
+    s.erase(s.begin(), std::find_if(s.begin(), s.end(), [](unsigned char ch) {
+        return !std::isspace(ch);
+    }));
+}
 
-#endif
+// trim from end (in place)
+void ltr::rtrim(std::string &s) {
+    s.erase(std::find_if(s.rbegin(), s.rend(), [](unsigned char ch) {
+        return !std::isspace(ch);
+    }).base(), s.end());
+}
+
+// trim from both ends (in place)
+void ltr::trim(std::string &s) {
+    ltr::ltrim(s);
+    ltr::rtrim(s);
+}

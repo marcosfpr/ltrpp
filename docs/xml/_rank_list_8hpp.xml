@@ -7,7 +7,8 @@
     <includes local="no">vector</includes>
     <includedby refid="_ada_rank_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp</includedby>
     <includedby refid="_learner_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Learner.hpp</includedby>
-    <includedby refid="ltr_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/ltr.hpp</includedby>
+    <includedby refid="learning_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/learning.hpp</includedby>
+    <includedby refid="ltr_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/ltr.hpp</includedby>
     <includedby refid="_data_set_8cpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataSet.cpp</includedby>
     <includedby refid="_rank_list_8cpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp</includedby>
     <includedby refid="_m_a_p_scorer_8cpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp</includedby>
@@ -56,12 +57,14 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="4">
+      <node id="5">
         <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Learner.hpp</label>
         <link refid="_learner_8hpp_source"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -69,21 +72,25 @@
         <link refid="_rank_list_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
-      <node id="3">
-        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltr.hpp</label>
+      <node id="4">
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/ltr.hpp</label>
         <link refid="ltr_8hpp_source"/>
       </node>
-      <node id="5">
+      <node id="6">
         <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp</label>
         <link refid="_ranker_8hpp_source"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -91,6 +98,12 @@
         <link refid="_ada_rank_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/learning.hpp</label>
+        <link refid="learning_8hpp_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classltr_1_1_rank_list" prot="public">ltr::RankList</innerclass>

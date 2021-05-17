@@ -3,7 +3,8 @@
   <compounddef id="_precision_scorer_8hpp" kind="file" language="C++">
     <compoundname>PrecisionScorer.hpp</compoundname>
     <includes refid="_metric_scorer_8hpp" local="yes">MetricScorer.hpp</includes>
-    <includedby refid="ltr_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/ltr.hpp</includedby>
+    <includedby refid="ltr_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/ltr.hpp</includedby>
+    <includedby refid="metric_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/metric.hpp</includedby>
     <includedby refid="_precision_scorer_8cpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/PrecisionScorer.cpp</includedby>
     <incdepgraph>
       <node id="7">
@@ -44,14 +45,20 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/metric.hpp</label>
+        <link refid="metric_8hpp_source"/>
+      </node>
       <node id="1">
         <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/PrecisionScorer.hpp</label>
         <link refid="_precision_scorer_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
       <node id="2">
-        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltr.hpp</label>
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/ltr.hpp</label>
         <link refid="ltr_8hpp_source"/>
       </node>
     </invincdepgraph>

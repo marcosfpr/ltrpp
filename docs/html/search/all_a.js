@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['permute_34',['permute',['../classltr_1_1_rank_list.html#a93e6b593b766811a5cd77d9ac1b13c1f',1,'ltr::RankList']]],
-  ['precisionscorer_35',['PrecisionScorer',['../classltr_1_1_precision_scorer.html',1,'ltr::PrecisionScorer'],['../classltr_1_1_precision_scorer.html#a2321d69c0c74f0a7cc3a984aec991eb5',1,'ltr::PrecisionScorer::PrecisionScorer(int k=5)'],['../classltr_1_1_precision_scorer.html#aec4bebec6a17259b69c2f9b21836dc91',1,'ltr::PrecisionScorer::PrecisionScorer(const PrecisionScorer &amp;ms)']]],
-  ['predict_36',['predict',['../classltr_1_1_weak_ranker.html#a10cd60e3aa7955a9cb44816e3523a3d1',1,'ltr::WeakRanker::predict()'],['../classltr_1_1_ada_rank.html#addc477120ac720e3c25b0eb9d3618fb8',1,'ltr::AdaRank::predict()'],['../classltr_1_1_learner.html#acf85ea361fa758668779249d77ce2ee5',1,'ltr::Learner::predict()'],['../classltr_1_1_ranker.html#a7a37948dc9fa6641b3952b22944fffce',1,'ltr::Ranker::predict()']]],
-  ['printheader_37',['printHeader',['../classltr_1_1_ada_rank.html#a80ce9f75c0d63f2b63d463a459d6dbb7',1,'ltr::AdaRank']]],
-  ['printiter_38',['printIter',['../classltr_1_1_ada_rank.html#a6280b97b78e53e073d576249569d1825',1,'ltr::AdaRank']]],
-  ['printresults_39',['printResults',['../classltr_1_1_ada_rank.html#a4eb2aa48c463ac876e2eb60d6990c26c',1,'ltr::AdaRank']]]
+  ['rank_39',['rank',['../classltr_1_1_learner.html#a8606e514b58a7e0caf51cfff1e247e44',1,'ltr::Learner::rank(DataSet &amp;l)'],['../classltr_1_1_learner.html#a5f32be74efa7fd80679d688def13c58e',1,'ltr::Learner::rank(RankList &amp;rl)']]],
+  ['ranker_40',['Ranker',['../classltr_1_1_ranker.html',1,'ltr::Ranker'],['../classltr_1_1_ranker.html#ab8288ded6770388b10235f002a08dddc',1,'ltr::Ranker::Ranker()']]],
+  ['ranklist_41',['RankList',['../classltr_1_1_rank_list.html',1,'ltr::RankList'],['../classltr_1_1_rank_list.html#a8ba9c6076cb67897d1cb0ff66336e4f3',1,'ltr::RankList::RankList(Sample data_points)'],['../classltr_1_1_rank_list.html#a7328669b281ef0836e63109bf0b9b066',1,'ltr::RankList::RankList(const RankList &amp;rl, vector&lt; int &gt; idx, int offset=0)'],['../classltr_1_1_rank_list.html#ac4201f553630131084076b8ba856eeea',1,'ltr::RankList::RankList(const RankList &amp;rl)'],['../classltr_1_1_rank_list.html#a34c66cf6d08f28fd6dd7068bfdb4dddb',1,'ltr::RankList::RankList(RankList &amp;&amp;rl) noexcept']]],
+  ['ranklistimpl_42',['RankListImpl',['../classltr_1_1_rank_list_impl.html',1,'ltr']]]
 ];

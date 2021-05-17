@@ -6,13 +6,13 @@
     <includes local="no">algorithm</includes>
     <includes local="no">utility</includes>
     <includes refid="_rank_list_8hpp" local="yes">../../api/learning/RankList.hpp</includes>
-    <includes refid="_ltr_error_8hpp" local="yes">../../api/LtrError.hpp</includes>
+    <includes refid="_ltr_error_8hpp" local="yes">../../api/utils/LtrError.hpp</includes>
     <incdepgraph>
       <node id="9">
         <label>list</label>
       </node>
       <node id="12">
-        <label>../../api/LtrError.hpp</label>
+        <label>../../api/utils/LtrError.hpp</label>
         <link refid="_ltr_error_8hpp_source"/>
         <childnode refid="7" relation="include">
         </childnode>
@@ -115,7 +115,7 @@
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/learning/RankList.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/LtrError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/utils/LtrError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::move;</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
