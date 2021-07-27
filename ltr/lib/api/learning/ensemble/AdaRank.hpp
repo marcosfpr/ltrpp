@@ -144,17 +144,20 @@ namespace ltr {
 
     protected:
 
-        /**
-         * Save json in file
-         * @param file
-         */
-        void saveJSON(std::ofstream& file) override;
 
         /**
-         * Load json from file
+         * Save file with one parser
          * @param file
+         * @param parser
          */
-        void loadJSON(std::ifstream& file) override;
+        void saveWith(std::ofstream& file, ltr::parser_t parser) override;
+
+        /**
+         * Load file format
+         * @param file
+         * @param parser
+         */
+        void loadFrom(std::ifstream& file, string extension) override;
 
         /**
          * @brief Learn the data

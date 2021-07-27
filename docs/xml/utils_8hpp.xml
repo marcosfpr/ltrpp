@@ -5,6 +5,7 @@
     <includes refid="_logging_8hpp" local="yes">../utils/Logging.hpp</includes>
     <includes refid="_ltr_error_8hpp" local="yes">../utils/LtrError.hpp</includes>
     <includes refid="_string_manip_8hpp" local="yes">../utils/StringManip.hpp</includes>
+    <includes refid="_parsing_8hpp" local="yes">../utils/Parsing.hpp</includes>
     <incdepgraph>
       <node id="1">
         <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/utils.hpp</label>
@@ -14,6 +15,8 @@
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -29,6 +32,19 @@
       </node>
       <node id="4">
         <label>string</label>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="8">
+        <label>../utils/Parsing.hpp</label>
+        <link refid="_parsing_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>../utils/Logging.hpp</label>
@@ -48,6 +64,9 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
+      </node>
+      <node id="10">
+        <label>boost/property_tree/ptree.hpp</label>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -81,8 +100,9 @@
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utils/Logging.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utils/LtrError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utils/StringManip.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//LTR_UTILS_HPP_</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utils/Parsing.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//LTR_UTILS_HPP_</highlight></codeline>
     </programlisting>
     <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/utils.hpp"/>
   </compounddef>

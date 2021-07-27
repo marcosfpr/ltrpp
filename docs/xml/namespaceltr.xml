@@ -61,6 +61,39 @@
         </inbodydescription>
         <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="52" column="1" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" bodystart="51" bodyend="58"/>
       </memberdef>
+      <memberdef kind="enum" id="_parsing_8hpp_1a36e48554e85cdcc5384ba024e5597a3f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>parser_t</name>
+        <enumvalue id="_parsing_8hpp_1a36e48554e85cdcc5384ba024e5597a3fae72afd563a1c6b89af20e2b1e041bf13" prot="public">
+          <name>dot_json</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_parsing_8hpp_1a36e48554e85cdcc5384ba024e5597a3fafdeb851c7fa451278b69a0e28c8af795" prot="public">
+          <name>dot_xml</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_parsing_8hpp_1a36e48554e85cdcc5384ba024e5597a3fafc2abefca416fe095eecf18870ccecd4" prot="public">
+          <name>dot_info</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Parsing types of ltr models. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Parsing.hpp" line="38" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Parsing.hpp" bodystart="38" bodyend="42"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="_data_set_8hpp_1ac1f8c5fc3e425c5fc38401d07c1c4747" prot="public" static="no">
@@ -477,6 +510,118 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="114" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="74" bodyend="100" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="114" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="_parsing_8hpp_1a21f039efc53b46175d2e24e179feef8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ltr::save</definition>
+        <argsstring>(std::ofstream &amp;file, pt::ptree property_tree, parser_t type)</argsstring>
+        <name>save</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>pt::ptree</type>
+          <declname>property_tree</declname>
+        </param>
+        <param>
+          <type>parser_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Unsafe method that writes a property tree into a XML|JSON|INFO file Unsafe because of ofstream&apos;s side effects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>property_tree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Parsing.hpp" line="53" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Parsing.cpp" bodystart="30" bodyend="44" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Parsing.hpp" declline="53" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="_parsing_8hpp_1a171efe9507b5c15d3dfa52ffebc919ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ltr::load</definition>
+        <argsstring>(std::ifstream &amp;file, pt::ptree &amp;property_tree, string extension)</argsstring>
+        <name>load</name>
+        <param>
+          <type>std::ifstream &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>pt::ptree &amp;</type>
+          <declname>property_tree</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>extension</declname>
+        </param>
+        <briefdescription>
+<para>Unsafe method that loads a property tree from a XML|JSON|INFO file Unsafe because a valid extension needs to be guaranteed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>property_tree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extension</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Parsing.hpp" line="64" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Parsing.cpp" bodystart="46" bodyend="59" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Parsing.hpp" declline="64" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="_string_manip_8hpp_1a3ab123d28a8d31251b4b6f01d5f08e77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>

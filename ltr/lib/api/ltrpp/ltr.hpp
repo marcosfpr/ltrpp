@@ -35,5 +35,6 @@
 #include "../utils/Logging.hpp"
 #include "../utils/LtrError.hpp"
 #include "../utils/StringManip.hpp"
+#include "../utils/Parsing.hpp"
 
 #endif //LTR_HPP_

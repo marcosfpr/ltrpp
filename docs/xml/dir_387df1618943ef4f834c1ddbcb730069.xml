@@ -4,6 +4,7 @@
     <compoundname>/home/marcos/Projetos/ltrpp/ltr/lib/api/utils</compoundname>
     <innerfile refid="_logging_8hpp">Logging.hpp</innerfile>
     <innerfile refid="_ltr_error_8hpp">LtrError.hpp</innerfile>
+    <innerfile refid="_parsing_8hpp">Parsing.hpp</innerfile>
     <innerfile refid="_string_manip_8hpp">StringManip.hpp</innerfile>
     <briefdescription>
     </briefdescription>

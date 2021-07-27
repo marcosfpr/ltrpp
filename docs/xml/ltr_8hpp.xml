@@ -14,6 +14,7 @@
     <includes refid="_logging_8hpp" local="yes">../utils/Logging.hpp</includes>
     <includes refid="_ltr_error_8hpp" local="yes">../utils/LtrError.hpp</includes>
     <includes refid="_string_manip_8hpp" local="yes">../utils/StringManip.hpp</includes>
+    <includes refid="_parsing_8hpp" local="yes">../utils/Parsing.hpp</includes>
     <incdepgraph>
       <node id="5">
         <label>list</label>
@@ -26,21 +27,21 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="21">
+      <node id="23">
         <label>../utils/LtrError.hpp</label>
         <link refid="_ltr_error_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="24">
         <label>stdexcept</label>
       </node>
-      <node id="20">
+      <node id="22">
         <label>../metric/PrecisionScorer.hpp</label>
         <link refid="_precision_scorer_8hpp_source"/>
-        <childnode refid="18" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -49,7 +50,7 @@
       <node id="11">
         <label>map</label>
       </node>
-      <node id="17">
+      <node id="19">
         <label>unordered_set</label>
       </node>
       <node id="13">
@@ -86,22 +87,24 @@
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
         <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
         <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
       </node>
-      <node id="18">
+      <node id="20">
         <label>../metric/MetricScorer.hpp</label>
         <link refid="_metric_scorer_8hpp_source"/>
         <childnode refid="6" relation="include">
@@ -109,6 +112,16 @@
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>../utils/Parsing.hpp</label>
+        <link refid="_parsing_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="15">
@@ -143,6 +156,8 @@
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
       </node>
       <node id="12">
         <label>utility</label>
@@ -157,13 +172,16 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="25">
         <label>../utils/StringManip.hpp</label>
         <link refid="_string_manip_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+      </node>
+      <node id="17">
+        <label>boost/property_tree/ptree.hpp</label>
       </node>
       <node id="2">
         <label>../learning/DataPoint.hpp</label>
@@ -173,12 +191,12 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="18">
         <label>../learning/ensemble/AdaRank.hpp</label>
         <link refid="_ada_rank_8hpp_source"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
@@ -187,10 +205,10 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="21">
         <label>../metric/MAPScorer.hpp</label>
         <link refid="_m_a_p_scorer_8hpp_source"/>
-        <childnode refid="18" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -239,8 +257,9 @@
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utils/Logging.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utils/LtrError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utils/StringManip.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//LTR_HPP_</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utils/Parsing.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//LTR_HPP_</highlight></codeline>
     </programlisting>
     <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/ltr.hpp"/>
   </compounddef>

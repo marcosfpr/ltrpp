@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['save_43',['save',['../classltr_1_1_ranker.html#a74f4aeca4387a60a1e8608c7efa71c5a',1,'ltr::Ranker']]],
-  ['savejson_44',['saveJSON',['../classltr_1_1_ada_rank.html#aad97b40a99fa1c70a8bffa66fa9a11fe',1,'ltr::AdaRank::saveJSON()'],['../classltr_1_1_ranker.html#a9eee499b16c0c26b9d761dd753a791ff',1,'ltr::Ranker::saveJSON()']]],
+  ['save_43',['save',['../classltr_1_1_ranker.html#a57ff74d267280e37d5123f0009fea998',1,'ltr::Ranker']]],
+  ['savewith_44',['saveWith',['../classltr_1_1_ada_rank.html#ae25aace2306f92a0032cb5cef68e4f99',1,'ltr::AdaRank::saveWith()'],['../classltr_1_1_ranker.html#ae4225505d940151b1d6b9ab77c1245e2',1,'ltr::Ranker::saveWith()']]],
   ['score_45',['score',['../classltr_1_1_m_a_p_scorer.html#a49e7a9b42c2b75f971124695bcc6e368',1,'ltr::MAPScorer::score(RankList &amp;rl) override'],['../classltr_1_1_m_a_p_scorer.html#a7b9e49d9962838c659a2ee75a21b1c0e',1,'ltr::MAPScorer::score(DataSet &amp;ds) override'],['../classltr_1_1_metric_scorer.html#a089b79830be7462487dfdf7060d87237',1,'ltr::MetricScorer::score(DataSet &amp;ds)'],['../classltr_1_1_metric_scorer.html#a44a294a84d0ad73363da62f6fb3cf403',1,'ltr::MetricScorer::score(RankList &amp;rl)'],['../classltr_1_1_precision_scorer.html#aa1b023d57d1feb859e55aa07e3ef7668',1,'ltr::PrecisionScorer::score(RankList &amp;rl) override'],['../classltr_1_1_precision_scorer.html#a6ef5beab3bafcbdb4dbe910c26841499',1,'ltr::PrecisionScorer::score(DataSet &amp;ds) override']]],
   ['selectweakranker_46',['selectWeakRanker',['../classltr_1_1_ada_rank.html#a958b9eaa0d4031dc1b8b3d51d2e1a4a9',1,'ltr::AdaRank']]],
   ['set_47',['set',['../classltr_1_1_rank_list.html#a877292f658419351084f230eab01ada4',1,'ltr::RankList']]],

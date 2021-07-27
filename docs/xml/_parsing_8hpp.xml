@@ -1,55 +1,79 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
-  <compounddef id="_ltr_error_8hpp" kind="file" language="C++">
-    <compoundname>LtrError.hpp</compoundname>
+  <compounddef id="_parsing_8hpp" kind="file" language="C++">
+    <compoundname>Parsing.hpp</compoundname>
+    <includes local="no">fstream</includes>
     <includes local="no">string</includes>
-    <includes local="no">stdexcept</includes>
+    <includes local="no">boost/property_tree/ptree.hpp</includes>
+    <includedby refid="_ranker_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp</includedby>
     <includedby refid="ltr_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/ltr.hpp</includedby>
     <includedby refid="utils_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/utils.hpp</includedby>
-    <includedby refid="_data_point_8cpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp</includedby>
-    <includedby refid="_data_set_8cpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataSet.cpp</includedby>
     <includedby refid="_ada_rank_8cpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp</includedby>
-    <includedby refid="_ranker_8cpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp</includedby>
-    <includedby refid="_rank_list_8cpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp</includedby>
-    <includedby refid="_logging_8cpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp</includedby>
     <includedby refid="_parsing_8cpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Parsing.cpp</includedby>
     <incdepgraph>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>fstream</label>
+      </node>
       <node id="1">
-        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/LtrError.hpp</label>
-        <link refid="_ltr_error_8hpp"/>
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Parsing.hpp</label>
+        <link refid="_parsing_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
-      <node id="3">
-        <label>stdexcept</label>
-      </node>
-      <node id="2">
-        <label>string</label>
+      <node id="4">
+        <label>boost/property_tree/ptree.hpp</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3">
+      <node id="6">
         <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/utils.hpp</label>
         <link refid="utils_8hpp_source"/>
       </node>
-      <node id="1">
-        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/LtrError.hpp</label>
-        <link refid="_ltr_error_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
+      <node id="5">
         <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/ltr.hpp</label>
         <link refid="ltr_8hpp_source"/>
       </node>
+      <node id="1">
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Parsing.hpp</label>
+        <link refid="_parsing_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp</label>
+        <link refid="_ranker_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp</label>
+        <link refid="_ada_rank_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltrpp/learning.hpp</label>
+        <link refid="learning_8hpp_source"/>
+      </node>
     </invincdepgraph>
-    <innerclass refid="classltr_1_1_ltr_error" prot="public">ltr::LtrError</innerclass>
     <innernamespace refid="namespaceltr">ltr</innernamespace>
-    <innernamespace refid="namespaceboost">boost</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -75,33 +99,33 @@
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THE<sp/>SOFTWARE.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LTR_ERROR_HPP_</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LTR_ERROR_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LTR_PARSING_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LTR_PARSING_HPP_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ltr{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="33" refid="classltr_1_1_ltr_error" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classltr_1_1_ltr_error" kindref="compound">LtrError</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::runtime_error{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classltr_1_1_ltr_error" kindref="compound">LtrError</ref>():std::runtime_error(</highlight><highlight class="stringliteral">&quot;LtrError&quot;</highlight><highlight class="normal">){}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_ltr_error" kindref="compound">LtrError</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>message):std::runtime_error(message.c_str()){}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">boost</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BOOST_NO_EXCEPTIONS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>throw_exception(<sp/>std::exception<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;<sp/>e<sp/>){</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>LtrError(</highlight><highlight class="stringliteral">&quot;Error<sp/>in<sp/>ltr:<sp/>boost<sp/>exception=&quot;</highlight><highlight class="normal"><sp/>+<sp/>e.what());</highlight></codeline>
-<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}</highlight><highlight class="comment">//<sp/>namespace<sp/>boost</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/property_tree/ptree.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">pt<sp/>=<sp/>boost::property_tree;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ltr<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>parser_t{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dot_json,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dot_xml,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dot_info</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>save(std::ofstream&amp;<sp/>file,<sp/>pt::ptree<sp/>property_tree,<sp/>parser_t<sp/>type);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>load(std::ifstream&amp;<sp/>file,<sp/>pt::ptree&amp;<sp/>property_tree,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>extension);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/LtrError.hpp"/>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Parsing.hpp"/>
   </compounddef>
 </doxygen>

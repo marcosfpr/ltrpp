@@ -73,10 +73,10 @@ endif()
 #######################################################
 add_subdirectory(ltr)
 
-# Python bindings
-if (BUILD_PYTHON_BINDING)
-    add_subdirectory(python)
-endif()
+# # Python bindings
+# if (BUILD_PYTHON_BINDING)
+#     add_subdirectory(python)
+# endif()
 
 
 #######################################################

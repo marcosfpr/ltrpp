@@ -24,8 +24,8 @@
     <member refid="classltr_1_1_ada_rank_1abf8c0dad49de3ddeebcb6686384b9e0c" kind="function"><name>getIter</name></member>
     <member refid="classltr_1_1_ada_rank_1a62d51d15bd50824171d84d19660fcc4a" kind="function"><name>getConsecutiveSelections</name></member>
     <member refid="classltr_1_1_ada_rank_1a049c9e0e051a19332dc0cdf2e33e9f59" kind="function"><name>getTolerance</name></member>
-    <member refid="classltr_1_1_ada_rank_1aad97b40a99fa1c70a8bffa66fa9a11fe" kind="function"><name>saveJSON</name></member>
-    <member refid="classltr_1_1_ada_rank_1a6f60500f9b913eaf6b5ef50d41fdc9db" kind="function"><name>loadJSON</name></member>
+    <member refid="classltr_1_1_ada_rank_1ae25aace2306f92a0032cb5cef68e4f99" kind="function"><name>saveWith</name></member>
+    <member refid="classltr_1_1_ada_rank_1a1fd5a68c5c9189dd671c0a79b5c118f3" kind="function"><name>loadFrom</name></member>
     <member refid="classltr_1_1_ada_rank_1a770b7bad96e6e7423ee0755b3d85d89c" kind="function"><name>learn</name></member>
     <member refid="classltr_1_1_ada_rank_1a958b9eaa0d4031dc1b8b3d51d2e1a4a9" kind="function"><name>selectWeakRanker</name></member>
     <member refid="classltr_1_1_ada_rank_1a5823949cfd30d5b4fbbed0d506203faa" kind="function"><name>evaluateWeakRanker</name></member>
@@ -145,11 +145,11 @@
     <member refid="classltr_1_1_ranker_1ae5e97bcb0d9c8240eb79b7f1b6dee67b" kind="function"><name>getTrainingScore</name></member>
     <member refid="classltr_1_1_ranker_1aa91b80e2d2964e052168d92c6428a234" kind="function"><name>getValidationScore</name></member>
     <member refid="classltr_1_1_ranker_1a584b627bf90240d0004e2d7cd09294c1" kind="function"><name>getFeatures</name></member>
-    <member refid="classltr_1_1_ranker_1a74f4aeca4387a60a1e8608c7efa71c5a" kind="function"><name>save</name></member>
+    <member refid="classltr_1_1_ranker_1a57ff74d267280e37d5123f0009fea998" kind="function"><name>save</name></member>
     <member refid="classltr_1_1_ranker_1a3061f589c024bd3d7c6cd7ea8b663c1a" kind="function"><name>load</name></member>
     <member refid="classltr_1_1_ranker_1a017be4905d31b7fcf3e070711e439b45" kind="function"><name>extractFeatures</name></member>
-    <member refid="classltr_1_1_ranker_1a9eee499b16c0c26b9d761dd753a791ff" kind="function"><name>saveJSON</name></member>
-    <member refid="classltr_1_1_ranker_1a3cd3b62ffd770b5074779de01632d3fc" kind="function"><name>loadJSON</name></member>
+    <member refid="classltr_1_1_ranker_1ae4225505d940151b1d6b9ab77c1245e2" kind="function"><name>saveWith</name></member>
+    <member refid="classltr_1_1_ranker_1a6887f9657fed9109d5d243635f5fad72" kind="function"><name>loadFrom</name></member>
     <member refid="classltr_1_1_ranker_1a8cdbb9de1737fd5de5786f50ed70fc6a" kind="function"><name>Ranker</name></member>
     <member refid="classltr_1_1_ranker_1aa0abc78fd58d1a1bcd713582a68c5426" kind="function"><name>operator=</name></member>
   </compound>
@@ -206,6 +206,10 @@
     <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfdaaa71669889745bd1ea6acca575222344" kind="enumvalue"><name>warning</name></member>
     <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda631752d28c4258d9bf00410916219839" kind="enumvalue"><name>error</name></member>
     <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda4e1fec08e374336b192380827e1b35ea" kind="enumvalue"><name>critical</name></member>
+    <member refid="_parsing_8hpp_1a36e48554e85cdcc5384ba024e5597a3f" kind="enum"><name>parser_t</name></member>
+    <member refid="_parsing_8hpp_1a36e48554e85cdcc5384ba024e5597a3fae72afd563a1c6b89af20e2b1e041bf13" kind="enumvalue"><name>dot_json</name></member>
+    <member refid="_parsing_8hpp_1a36e48554e85cdcc5384ba024e5597a3fafdeb851c7fa451278b69a0e28c8af795" kind="enumvalue"><name>dot_xml</name></member>
+    <member refid="_parsing_8hpp_1a36e48554e85cdcc5384ba024e5597a3fafc2abefca416fe095eecf18870ccecd4" kind="enumvalue"><name>dot_info</name></member>
     <member refid="_data_set_8hpp_1ac1f8c5fc3e425c5fc38401d07c1c4747" kind="typedef"><name>DataSet</name></member>
     <member refid="_iterators_8hpp_1a093773d4a757c2d26b4db423544f129f" kind="typedef"><name>FeaturesContainer</name></member>
     <member refid="_iterators_8hpp_1a2bf554721a2837e450a54db357b900fe" kind="typedef"><name>ReadableDataPoint</name></member>
@@ -219,6 +223,8 @@
     <member refid="_logging_8hpp_1a02680bdc96ec899628b33ce6b2e70893" kind="function"><name>log</name></member>
     <member refid="_logging_8hpp_1aa7bb902b4e9dc50f01c53aca094c26d3" kind="function"><name>log</name></member>
     <member refid="_logging_8hpp_1a402821d151f76a4b1794bb88e7ff6686" kind="function"><name>log</name></member>
+    <member refid="_parsing_8hpp_1a21f039efc53b46175d2e24e179feef8d" kind="function"><name>save</name></member>
+    <member refid="_parsing_8hpp_1a171efe9507b5c15d3dfa52ffebc919ee" kind="function"><name>load</name></member>
     <member refid="_string_manip_8hpp_1a3ab123d28a8d31251b4b6f01d5f08e77" kind="function"><name>split</name></member>
     <member refid="_string_manip_8hpp_1afaf0eb77a287418ea113a2af803c7c37" kind="function"><name>trim</name></member>
     <member refid="_string_manip_8hpp_1a32c1f8c82fb8444ef60f2ed976b255ff" kind="function"><name>rtrim</name></member>
@@ -273,10 +279,12 @@
   </compound>
   <compound refid="_ltr_error_8hpp" kind="file"><name>LtrError.hpp</name>
   </compound>
+  <compound refid="_parsing_8hpp" kind="file"><name>Parsing.hpp</name>
+  </compound>
   <compound refid="_string_manip_8hpp" kind="file"><name>StringManip.hpp</name>
   </compound>
   <compound refid="_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
-    <member refid="_c_make_lists_8txt_1ad22406135535e7adcf4b73ea9351dacc" kind="function"><name>CPMFindPackage</name></member>
+    <member refid="_c_make_lists_8txt_1ab4388710711638eca9bafe5f9132d664" kind="function"><name>CPMFindPackage</name></member>
     <member refid="_c_make_lists_8txt_1a10802b184dc7017ecc2bcba495077ec7" kind="function"><name>target_include_directories</name></member>
   </compound>
   <compound refid="_data_point_8cpp" kind="file"><name>DataPoint.cpp</name>
@@ -301,6 +309,8 @@
   <compound refid="_precision_scorer_8cpp" kind="file"><name>PrecisionScorer.cpp</name>
   </compound>
   <compound refid="_logging_8cpp" kind="file"><name>Logging.cpp</name>
+  </compound>
+  <compound refid="_parsing_8cpp" kind="file"><name>Parsing.cpp</name>
   </compound>
   <compound refid="_string_manip_8cpp" kind="file"><name>StringManip.cpp</name>
   </compound>

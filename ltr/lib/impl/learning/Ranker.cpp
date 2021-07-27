@@ -91,7 +91,7 @@ vector<int> Ranker::getFeatures(){
 }
 
 
-void Ranker::save(const string& fileToSave){
+void Ranker::save(const string& fileToSave, ltr::parser_t parser){
     fs::path path = fs::path(fileToSave.c_str());
 
     fs::path dir = path.parent_path();
@@ -102,7 +102,7 @@ void Ranker::save(const string& fileToSave){
     std::ofstream file(fileToSave.c_str());
 
     try {
-        this->saveJSON(file);
+        this->saveWith(file, parser);
         file.close();
     }
     catch (std::logic_error& e) {
@@ -120,7 +120,7 @@ void Ranker::load(const string& fileToLoad) {
 
     std::ifstream file(fileToLoad.c_str());
 
-    this->loadJSON(file);
+    this->loadFrom(file, path.extension());
 
     file.close();
 }
@@ -133,12 +133,12 @@ double Ranker::predict(ReadableDataPoint dp){
     throw std::logic_error("No implementation of 'Ranker::predict' provided");
 }
 
-void Ranker::loadJSON(std::ifstream& file){
-    throw std::logic_error("No implementation of 'Ranker::loadJSON' provided");
+void Ranker::loadFrom(std::ifstream& file, string extension){
+    throw std::logic_error("No implementation of 'Ranker::loadFrom' provided");
 }
 
-void Ranker::saveJSON(std::ofstream& file) {
-    throw std::logic_error("No implementation of 'Ranker::saveJSON' provided");
+void Ranker::saveWith(std::ofstream& file, ltr::parser_t parser) {
+    throw std::logic_error("No implementation of 'Ranker::saveWith' provided");
 }
 
 void Ranker::extractFeatures(){

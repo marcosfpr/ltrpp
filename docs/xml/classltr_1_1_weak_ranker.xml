@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="47" column="22" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="42" bodyend="42"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="47" column="22" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="38" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_weak_ranker_1ad8541406ded864ac32f1e5c9a6702e10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="61" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="46" bodyend="49"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="61" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="42" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_weak_ranker_1a1ad3bd87936013a73c34e79bab8c92c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="68" column="17" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="51" bodyend="53"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="68" column="17" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="47" bodyend="49"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

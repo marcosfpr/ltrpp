@@ -104,96 +104,98 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;Learner.hpp&quot;</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;../utils/Logging.hpp&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">using</span> std::unique_ptr;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">using</span> std::string;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">using</span> std::list;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">using</span> std::vector;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">using</span> std::map;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span>ltr {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">class </span>MetricScorer;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classltr_1_1_ranker.html">   49</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classltr_1_1_ranker.html">Ranker</a> : <span class="keyword">public</span> <a class="code" href="classltr_1_1_learner.html">Learner</a>{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="classltr_1_1_ranker.html#ab8288ded6770388b10235f002a08dddc">Ranker</a>(DataSet dataset, unique_ptr&lt;MetricScorer&gt; scorer, vector&lt;int&gt; features={}, DataSet validationSet={});</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="classltr_1_1_ranker.html#aa24c1f390119dcb7bf1520d99d09dd52">~Ranker</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#ab613fb21ed03dbe10fcabb77b29f89d8">fit</a>();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_ranker.html#a7a37948dc9fa6641b3952b22944fffce">predict</a>(ReadableDataPoint dp);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#abc1372c4de267531fef282da26300744">setTrainingSet</a>(DataSet dataset);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a9d702d1f3e458a71fd511e6594c671d0">setFeatures</a>(vector&lt;int&gt; ft);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a1e1f6a229ac7771342218361b07b071a">setValidationSet</a>(DataSet dataset);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a548f135d7bc17adcf98ce2e2181dc2cb">setScorer</a>(unique_ptr&lt;MetricScorer&gt; scr);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_ranker.html#ae5e97bcb0d9c8240eb79b7f1b6dee67b">getTrainingScore</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_ranker.html#aa91b80e2d2964e052168d92c6428a234">getValidationScore</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            vector&lt;int&gt; <a class="code" href="classltr_1_1_ranker.html#a584b627bf90240d0004e2d7cd09294c1">getFeatures</a>();</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a74f4aeca4387a60a1e8608c7efa71c5a">save</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; fileToSave);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a3061f589c024bd3d7c6cd7ea8b663c1a">load</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; fileToLoad);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;../utils/Parsing.hpp&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">using</span> std::unique_ptr;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">using</span> std::list;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">using</span> std::map;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">namespace </span>ltr {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">class </span>MetricScorer;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classltr_1_1_ranker.html">   51</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classltr_1_1_ranker.html">Ranker</a> : <span class="keyword">public</span> <a class="code" href="classltr_1_1_learner.html">Learner</a>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <a class="code" href="classltr_1_1_ranker.html#ab8288ded6770388b10235f002a08dddc">Ranker</a>(DataSet dataset, unique_ptr&lt;MetricScorer&gt; scorer, vector&lt;int&gt; features={}, DataSet validationSet={});</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <a class="code" href="classltr_1_1_ranker.html#aa24c1f390119dcb7bf1520d99d09dd52">~Ranker</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#ab613fb21ed03dbe10fcabb77b29f89d8">fit</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_ranker.html#a7a37948dc9fa6641b3952b22944fffce">predict</a>(ReadableDataPoint dp);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#abc1372c4de267531fef282da26300744">setTrainingSet</a>(DataSet dataset);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a9d702d1f3e458a71fd511e6594c671d0">setFeatures</a>(vector&lt;int&gt; ft);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a1e1f6a229ac7771342218361b07b071a">setValidationSet</a>(DataSet dataset);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a548f135d7bc17adcf98ce2e2181dc2cb">setScorer</a>(unique_ptr&lt;MetricScorer&gt; scr);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_ranker.html#ae5e97bcb0d9c8240eb79b7f1b6dee67b">getTrainingScore</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_ranker.html#aa91b80e2d2964e052168d92c6428a234">getValidationScore</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            vector&lt;int&gt; <a class="code" href="classltr_1_1_ranker.html#a584b627bf90240d0004e2d7cd09294c1">getFeatures</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a57ff74d267280e37d5123f0009fea998">save</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; fileToSave, ltr::parser_t parser = ltr::dot_json);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a3061f589c024bd3d7c6cd7ea8b663c1a">load</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; fileToLoad);</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a017be4905d31b7fcf3e070711e439b45">extractFeatures</a>();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a9eee499b16c0c26b9d761dd753a791ff">saveJSON</a>(std::ofstream&amp; file);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a3cd3b62ffd770b5074779de01632d3fc">loadJSON</a>(std::ifstream&amp; file);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            DataSet training_samples, validation_samples;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            vector&lt;int&gt; features;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            unique_ptr&lt;MetricScorer&gt; scorer;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a017be4905d31b7fcf3e070711e439b45">extractFeatures</a>();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#ae4225505d940151b1d6b9ab77c1245e2">saveWith</a>(std::ofstream&amp; file, ltr::parser_t parser);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_ranker.html#a6887f9657fed9109d5d243635f5fad72">loadFrom</a>(std::ifstream&amp; file, <span class="keywordtype">string</span> extension);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            DataSet training_samples, validation_samples;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordtype">double</span> score_training, score_validation;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordtype">bool</span> verbose;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            vector&lt;int&gt; features;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            unique_ptr&lt;MetricScorer&gt; scorer;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordtype">double</span> score_training, score_validation;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="comment">// avoiding operators </span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <a class="code" href="classltr_1_1_ranker.html#ab8288ded6770388b10235f002a08dddc">Ranker</a>(<span class="keyword">const</span> <a class="code" href="classltr_1_1_ranker.html">Ranker</a>&amp; rk);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordtype">bool</span> verbose;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <a class="code" href="classltr_1_1_ranker.html">Ranker</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classltr_1_1_ranker.html">Ranker</a>&amp; rk);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    };</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor">#endif // !RANKER_HPP_</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="comment">// avoiding operators </span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <a class="code" href="classltr_1_1_ranker.html#ab8288ded6770388b10235f002a08dddc">Ranker</a>(<span class="keyword">const</span> <a class="code" href="classltr_1_1_ranker.html">Ranker</a>&amp; rk);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <a class="code" href="classltr_1_1_ranker.html">Ranker</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classltr_1_1_ranker.html">Ranker</a>&amp; rk);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    };</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#endif // !RANKER_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassltr_1_1_learner_html"><div class="ttname"><a href="classltr_1_1_learner.html">ltr::Learner</a></div><div class="ttdoc">Base Learner Agent interface for LTR algorithms The capabilities of a LTR learner is to generate a sc...</div><div class="ttdef"><b>Definition:</b> Learner.hpp:34</div></div>
 <div class="ttc" id="aclassltr_1_1_ranker_html_a7a37948dc9fa6641b3952b22944fffce"><div class="ttname"><a href="classltr_1_1_ranker.html#a7a37948dc9fa6641b3952b22944fffce">ltr::Ranker::predict</a></div><div class="ttdeci">virtual double predict(ReadableDataPoint dp)</div><div class="ttdoc">Evaluation of a single datapoint object.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:132</div></div>
-<div class="ttc" id="aclassltr_1_1_ranker_html_a9eee499b16c0c26b9d761dd753a791ff"><div class="ttname"><a href="classltr_1_1_ranker.html#a9eee499b16c0c26b9d761dd753a791ff">ltr::Ranker::saveJSON</a></div><div class="ttdeci">virtual void saveJSON(std::ofstream &amp;file)</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:140</div></div>
+<div class="ttc" id="aclassltr_1_1_ranker_html_a57ff74d267280e37d5123f0009fea998"><div class="ttname"><a href="classltr_1_1_ranker.html#a57ff74d267280e37d5123f0009fea998">ltr::Ranker::save</a></div><div class="ttdeci">void save(const string &amp;fileToSave, ltr::parser_t parser=ltr::dot_json)</div><div class="ttdoc">Save model in file.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:94</div></div>
 <div class="ttc" id="aclassltr_1_1_ranker_html_ab613fb21ed03dbe10fcabb77b29f89d8"><div class="ttname"><a href="classltr_1_1_ranker.html#ab613fb21ed03dbe10fcabb77b29f89d8">ltr::Ranker::fit</a></div><div class="ttdeci">virtual void fit()</div><div class="ttdoc">Learn method for some learning algorithm.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:128</div></div>
 <div class="ttc" id="aclassltr_1_1_ranker_html_a3061f589c024bd3d7c6cd7ea8b663c1a"><div class="ttname"><a href="classltr_1_1_ranker.html#a3061f589c024bd3d7c6cd7ea8b663c1a">ltr::Ranker::load</a></div><div class="ttdeci">void load(const string &amp;fileToLoad)</div><div class="ttdoc">Lodel model from file.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:115</div></div>
 <div class="ttc" id="aclassltr_1_1_ranker_html_a9d702d1f3e458a71fd511e6594c671d0"><div class="ttname"><a href="classltr_1_1_ranker.html#a9d702d1f3e458a71fd511e6594c671d0">ltr::Ranker::setFeatures</a></div><div class="ttdeci">void setFeatures(vector&lt; int &gt; ft)</div><div class="ttdoc">Set the Features for Ranker.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:67</div></div>
 <div class="ttc" id="aclassltr_1_1_ranker_html_ae5e97bcb0d9c8240eb79b7f1b6dee67b"><div class="ttname"><a href="classltr_1_1_ranker.html#ae5e97bcb0d9c8240eb79b7f1b6dee67b">ltr::Ranker::getTrainingScore</a></div><div class="ttdeci">virtual double getTrainingScore() const</div><div class="ttdoc">Get the Training Score.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:80</div></div>
 <div class="ttc" id="aclassltr_1_1_ranker_html_a1e1f6a229ac7771342218361b07b071a"><div class="ttname"><a href="classltr_1_1_ranker.html#a1e1f6a229ac7771342218361b07b071a">ltr::Ranker::setValidationSet</a></div><div class="ttdeci">void setValidationSet(DataSet dataset)</div><div class="ttdoc">Set the Validation Set for Ranker.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:71</div></div>
-<div class="ttc" id="aclassltr_1_1_ranker_html"><div class="ttname"><a href="classltr_1_1_ranker.html">ltr::Ranker</a></div><div class="ttdoc">Generic Ranker class.</div><div class="ttdef"><b>Definition:</b> Ranker.hpp:49</div></div>
+<div class="ttc" id="aclassltr_1_1_ranker_html"><div class="ttname"><a href="classltr_1_1_ranker.html">ltr::Ranker</a></div><div class="ttdoc">Generic Ranker class.</div><div class="ttdef"><b>Definition:</b> Ranker.hpp:51</div></div>
 <div class="ttc" id="aclassltr_1_1_ranker_html_a584b627bf90240d0004e2d7cd09294c1"><div class="ttname"><a href="classltr_1_1_ranker.html#a584b627bf90240d0004e2d7cd09294c1">ltr::Ranker::getFeatures</a></div><div class="ttdeci">vector&lt; int &gt; getFeatures()</div><div class="ttdoc">Get the used Features.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:89</div></div>
 <div class="ttc" id="aclassltr_1_1_ranker_html_a017be4905d31b7fcf3e070711e439b45"><div class="ttname"><a href="classltr_1_1_ranker.html#a017be4905d31b7fcf3e070711e439b45">ltr::Ranker::extractFeatures</a></div><div class="ttdeci">void extractFeatures()</div><div class="ttdoc">Extract all features used on training samples.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:144</div></div>
-<div class="ttc" id="aclassltr_1_1_ranker_html_a74f4aeca4387a60a1e8608c7efa71c5a"><div class="ttname"><a href="classltr_1_1_ranker.html#a74f4aeca4387a60a1e8608c7efa71c5a">ltr::Ranker::save</a></div><div class="ttdeci">void save(const string &amp;fileToSave)</div><div class="ttdoc">Save model in file.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:94</div></div>
 <div class="ttc" id="aclassltr_1_1_ranker_html_abc1372c4de267531fef282da26300744"><div class="ttname"><a href="classltr_1_1_ranker.html#abc1372c4de267531fef282da26300744">ltr::Ranker::setTrainingSet</a></div><div class="ttdeci">void setTrainingSet(DataSet dataset)</div><div class="ttdoc">Set the Training Set of Ranker.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:63</div></div>
 <div class="ttc" id="aclassltr_1_1_ranker_html_aa24c1f390119dcb7bf1520d99d09dd52"><div class="ttname"><a href="classltr_1_1_ranker.html#aa24c1f390119dcb7bf1520d99d09dd52">ltr::Ranker::~Ranker</a></div><div class="ttdeci">~Ranker()</div><div class="ttdoc">Destroy the Ranker object.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:57</div></div>
+<div class="ttc" id="aclassltr_1_1_ranker_html_a6887f9657fed9109d5d243635f5fad72"><div class="ttname"><a href="classltr_1_1_ranker.html#a6887f9657fed9109d5d243635f5fad72">ltr::Ranker::loadFrom</a></div><div class="ttdeci">virtual void loadFrom(std::ifstream &amp;file, string extension)</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:136</div></div>
 <div class="ttc" id="aclassltr_1_1_ranker_html_ab8288ded6770388b10235f002a08dddc"><div class="ttname"><a href="classltr_1_1_ranker.html#ab8288ded6770388b10235f002a08dddc">ltr::Ranker::Ranker</a></div><div class="ttdeci">Ranker(DataSet dataset, unique_ptr&lt; MetricScorer &gt; scorer, vector&lt; int &gt; features={}, DataSet validationSet={})</div><div class="ttdoc">Construct a new Ranker object.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:41</div></div>
 <div class="ttc" id="aclassltr_1_1_ranker_html_aa91b80e2d2964e052168d92c6428a234"><div class="ttname"><a href="classltr_1_1_ranker.html#aa91b80e2d2964e052168d92c6428a234">ltr::Ranker::getValidationScore</a></div><div class="ttdeci">double getValidationScore() const</div><div class="ttdoc">Get the Validation Score.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:85</div></div>
 <div class="ttc" id="aclassltr_1_1_ranker_html_a548f135d7bc17adcf98ce2e2181dc2cb"><div class="ttname"><a href="classltr_1_1_ranker.html#a548f135d7bc17adcf98ce2e2181dc2cb">ltr::Ranker::setScorer</a></div><div class="ttdeci">void setScorer(unique_ptr&lt; MetricScorer &gt; scr)</div><div class="ttdoc">Set the Scorer wich will be used for Ranker.</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:76</div></div>
-<div class="ttc" id="aclassltr_1_1_ranker_html_a3cd3b62ffd770b5074779de01632d3fc"><div class="ttname"><a href="classltr_1_1_ranker.html#a3cd3b62ffd770b5074779de01632d3fc">ltr::Ranker::loadJSON</a></div><div class="ttdeci">virtual void loadJSON(std::ifstream &amp;file)</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:136</div></div>
+<div class="ttc" id="aclassltr_1_1_ranker_html_ae4225505d940151b1d6b9ab77c1245e2"><div class="ttname"><a href="classltr_1_1_ranker.html#ae4225505d940151b1d6b9ab77c1245e2">ltr::Ranker::saveWith</a></div><div class="ttdeci">virtual void saveWith(std::ofstream &amp;file, ltr::parser_t parser)</div><div class="ttdef"><b>Definition:</b> Ranker.cpp:140</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

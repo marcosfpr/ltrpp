@@ -36,6 +36,7 @@ set(
     impl/metric/PrecisionScorer.cpp
     impl/utils/Logging.cpp
     impl/utils/StringManip.cpp
+    impl/utils/Parsing.cpp
 
 )
 

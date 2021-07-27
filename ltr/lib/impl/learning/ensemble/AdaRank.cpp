@@ -21,6 +21,7 @@
 #include "../../../api/learning/ensemble/AdaRank.hpp"
 #include "../../../api/metric/MetricScorer.hpp"
 #include "../../../api/utils/LtrError.hpp"
+#include "../../../api/utils/Parsing.hpp"
 
 #include <string>
 #include <utility>
@@ -28,14 +29,9 @@
 #include <memory>
 #include <cmath>
 
-#include <boost/algorithm/string.hpp>
-#include <boost/property_tree/json_parser.hpp>
-#include <boost/property_tree/ptree.hpp>
-
 using std::unique_ptr;
 using std::vector;
 using std::stringstream;
-namespace pt = boost::property_tree;
 
 using namespace ltr;
 
@@ -262,7 +258,7 @@ double AdaRank::predict(ReadableDataPoint dp){
     return score;
 }
 
-void AdaRank::saveJSON(std::ofstream& file){
+void AdaRank::saveWith(std::ofstream& file, ltr::parser_t parser){
     pt::ptree root;
 
     root.put("model", "AdaRank");
@@ -297,12 +293,12 @@ void AdaRank::saveJSON(std::ofstream& file){
 
     root.add_child("parameters", subtree);
 
-    pt::write_json(file, root);
+    ltr::save(file, root, parser);
 }
 
-void AdaRank::loadJSON(std::ifstream& file){
+void AdaRank::loadFrom(std::ifstream& file, string extension){
     pt::ptree root;
-    pt::read_json(file, root);
+    ltr::load(file, root, extension);
 
     if(std::strcmp(root.get<string>("model").c_str(), "AdaRank") != 0)
         throw LtrError("Error in AdaRank::loadJSON() : required model it's different of AdaRank.");

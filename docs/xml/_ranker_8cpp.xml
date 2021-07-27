@@ -30,7 +30,7 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="22">
         <label>filesystem</label>
       </node>
       <node id="1">
@@ -40,9 +40,9 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
@@ -50,13 +50,13 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="4">
         <label>stdexcept</label>
       </node>
-      <node id="19">
+      <node id="21">
         <label>numeric</label>
       </node>
       <node id="3">
@@ -86,7 +86,7 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="18">
+      <node id="20">
         <label>../../api/metric/MetricScorer.hpp</label>
         <link refid="_metric_scorer_8hpp_source"/>
         <childnode refid="7" relation="include">
@@ -94,6 +94,16 @@
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../utils/Parsing.hpp</label>
+        <link refid="_parsing_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
       <node id="17">
@@ -128,6 +138,8 @@
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
       </node>
       <node id="10">
         <label>utility</label>
@@ -141,6 +153,9 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
+      </node>
+      <node id="19">
+        <label>boost/property_tree/ptree.hpp</label>
       </node>
       <node id="14">
         <label>DataPoint.hpp</label>
@@ -252,7 +267,7 @@
 <codeline lineno="91"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_ranker_1a74f4aeca4387a60a1e8608c7efa71c5a" kindref="member">Ranker::save</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>fileToSave){</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_ranker_1a57ff74d267280e37d5123f0009fea998" kindref="member">Ranker::save</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>fileToSave,<sp/>ltr::parser_t<sp/>parser){</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>fs::path<sp/>path<sp/>=<sp/>fs::path(fileToSave.c_str());</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>fs::path<sp/>dir<sp/>=<sp/>path.parent_path();</highlight></codeline>
@@ -263,7 +278,7 @@
 <codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream<sp/>file(fileToSave.c_str());</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
 <codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classltr_1_1_ranker_1a9eee499b16c0c26b9d761dd753a791ff" kindref="member">saveJSON</ref>(file);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classltr_1_1_ranker_1ae4225505d940151b1d6b9ab77c1245e2" kindref="member">saveWith</ref>(file,<sp/>parser);</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file.close();</highlight></codeline>
 <codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(std::logic_error&amp;<sp/>e)<sp/>{</highlight></codeline>
@@ -281,7 +296,7 @@
 <codeline lineno="120"><highlight class="normal"></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ifstream<sp/>file(fileToLoad.c_str());</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classltr_1_1_ranker_1a3cd3b62ffd770b5074779de01632d3fc" kindref="member">loadJSON</ref>(file);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classltr_1_1_ranker_1a6887f9657fed9109d5d243635f5fad72" kindref="member">loadFrom</ref>(file,<sp/>path.extension());</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"></highlight></codeline>
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>file.close();</highlight></codeline>
 <codeline lineno="126"><highlight class="normal">}</highlight></codeline>
@@ -294,12 +309,12 @@
 <codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;No<sp/>implementation<sp/>of<sp/>&apos;Ranker::predict&apos;<sp/>provided&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="134"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_ranker_1a3cd3b62ffd770b5074779de01632d3fc" kindref="member">Ranker::loadJSON</ref>(std::ifstream&amp;<sp/>file){</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;No<sp/>implementation<sp/>of<sp/>&apos;Ranker::loadJSON&apos;<sp/>provided&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_ranker_1a6887f9657fed9109d5d243635f5fad72" kindref="member">Ranker::loadFrom</ref>(std::ifstream&amp;<sp/>file,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>extension){</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;No<sp/>implementation<sp/>of<sp/>&apos;Ranker::loadFrom&apos;<sp/>provided&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="138"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"></highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_ranker_1a9eee499b16c0c26b9d761dd753a791ff" kindref="member">Ranker::saveJSON</ref>(std::ofstream&amp;<sp/>file)<sp/>{</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;No<sp/>implementation<sp/>of<sp/>&apos;Ranker::saveJSON&apos;<sp/>provided&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_ranker_1ae4225505d940151b1d6b9ab77c1245e2" kindref="member">Ranker::saveWith</ref>(std::ofstream&amp;<sp/>file,<sp/>ltr::parser_t<sp/>parser)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;No<sp/>implementation<sp/>of<sp/>&apos;Ranker::saveWith&apos;<sp/>provided&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="142"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight></codeline>
 <codeline lineno="144"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_ranker_1a017be4905d31b7fcf3e070711e439b45" kindref="member">Ranker::extractFeatures</ref>(){</highlight></codeline>

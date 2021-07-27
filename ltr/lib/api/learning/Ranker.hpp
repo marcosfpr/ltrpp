@@ -31,6 +31,7 @@
 
 #include "Learner.hpp"
 #include "../utils/Logging.hpp"
+#include "../utils/Parsing.hpp"
 
 using std::unique_ptr;
 using std::string;
@@ -39,6 +40,7 @@ using std::vector;
 using std::map;
 
 namespace ltr {
+
 
     class MetricScorer;
     
@@ -133,7 +135,7 @@ namespace ltr {
              * 
              * @param fileToSave 
              */
-            void save(const string& fileToSave);
+            void save(const string& fileToSave, ltr::parser_t parser = ltr::dot_json);
 
             /**
              * @brief Lodel model from file
@@ -150,16 +152,18 @@ namespace ltr {
             void extractFeatures();
 
             /**
-             * Save json in file
+             * Save file with one parser
              * @param file
+             * @param parser
              */
-            virtual void saveJSON(std::ofstream& file);
+            virtual void saveWith(std::ofstream& file, ltr::parser_t parser);
 
             /**
-             * Load json from file
+             * Load file format
              * @param file
+             * @param parser
              */
-            virtual void loadJSON(std::ifstream& file);
+            virtual void loadFrom(std::ifstream& file, string extension);
 
 
             DataSet training_samples, validation_samples;

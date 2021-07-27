@@ -18,12 +18,51 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#ifndef LTR_UTILS_HPP_
-#define LTR_UTILS_HPP_
+#ifndef LTR_PARSING_HPP_
+#define LTR_PARSING_HPP_
 
-#include "../utils/Logging.hpp"
-#include "../utils/LtrError.hpp"
-#include "../utils/StringManip.hpp"
-#include "../utils/Parsing.hpp"
+#include <fstream>
+#include <string>
 
-#endif //LTR_UTILS_HPP_
+#include <boost/property_tree/ptree.hpp>
+namespace pt = boost::property_tree;
+
+using std::string;
+
+namespace ltr {
+
+    /**
+     * @brief Parsing types of ltr models
+     * 
+     */
+    enum parser_t{
+        dot_json,
+        dot_xml,
+        dot_info
+    };
+
+    /**
+     * @brief Unsafe method that writes a property tree into a XML|JSON|INFO file
+     *  Unsafe because of ofstream's side effects.
+     * @param file 
+     * @param property_tree 
+     * @param type 
+     * @return true 
+     * @return false 
+     */
+    void save(std::ofstream& file, pt::ptree property_tree, parser_t type);
+    
+    /**
+     * @brief Unsafe method that loads a property tree from a XML|JSON|INFO file
+     * Unsafe because a valid extension needs to be guaranteed
+     * @param file 
+     * @param property_tree 
+     * @param extension 
+     * @return true 
+     * @return false 
+     */
+    void load(std::ifstream& file, pt::ptree& property_tree, string extension);
+}
+
+
+#endif
