@@ -4,7 +4,7 @@
   <h3 align="center">Learning to Rank ++</h3>
 
   <p align="center">
-    A fast Learning to Rank library based on RankLib
+    Small Learning to Rank library based on RankLib
     <br />
     <a href="https://ltr.readthedocs.io/"><strong>Explore the docs »</strong></a>
     <br />
